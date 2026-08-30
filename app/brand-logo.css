@@ -1,0 +1,44 @@
+.brand-logo {
+  display: block;
+  width: 150px;
+  height: 160px;
+  flex: 0 0 60px;
+  object-fit: contain;
+}
+
+.footer-branding {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo-link {
+  display: block;
+  line-height: 0;
+  margin-bottom: 0.2rem;
+}
+
+.footer-logo {
+  display: block;
+  width: 150px;
+  height: 160px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.footer-branding p {
+  display: block;
+  margin: 0;
+  margin-left: 12px;
+  margin-top: -50px;
+  line-height: 1.2;
+  max-width: 230px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 30px;
+    height: 70px;
+    flex-basis: 30px;
+  }
+}
