@@ -57,14 +57,14 @@ export const heroImages = {
 
 // Paste your seven Cloudinary image URLs here when they are ready.
 export const galleryImages = [
-  { src: images.gallery1, alt: "Family walking together outdoors", title: "Outdoor" },
-  { src: images.gallery2, alt: "Adult and child drawing together", title: "Compound" },
-  { src: images.gallery3, alt: "Supported living kitchen activity", title: "Side View" },
-  { src: images.gallery4, alt: "Children playing outside", title: "Front View" },
-  { src: images.gallery5, alt: "Adult reading with a child", title: "Outdoor Space" },
-  { src: images.gallery6, alt: "Support worker walking with an adult", title: "Living Room" },
-  { src: images.gallery7, alt: "Professionals meeting together", title: "Kitchen" },
-  { src: images.gallery8, alt: "Professionals meeting together", title: "Mini Garden" },
+  { src: images.gallery1, alt: "Family walking together outdoors", title: "Outdoor", category: "childrens-contact-house" },
+  { src: images.gallery2, alt: "Adult and child drawing together", title: "Compound", category: "childrens-contact-house" },
+  { src: images.gallery3, alt: "Supported living kitchen activity", title: "Side View", category: "childrens-contact-house" },
+  { src: images.gallery4, alt: "Children playing outside", title: "Front View", category: "childrens-contact-house" },
+  { src: images.gallery5, alt: "Adult reading with a child", title: "Outdoor Space", category: "childrens-contact-house" },
+  { src: images.gallery6, alt: "Support worker walking with an adult", title: "Living Room", category: "childrens-contact-house" },
+  { src: images.gallery7, alt: "Professionals meeting together", title: "Kitchen", category: "childrens-contact-house" },
+  { src: images.gallery8, alt: "Professionals meeting together", title: "Mini Garden", category: "childrens-contact-house" },
 ] as const;
 
 export const accreditations = [

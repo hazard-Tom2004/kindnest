@@ -33,4 +33,5 @@ dist-ssr
 
 .next/
 package-lock.json
+.env
 

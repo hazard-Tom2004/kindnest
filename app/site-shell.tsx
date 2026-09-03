@@ -12,6 +12,7 @@ const links = [
     ["/gallery", "Gallery"],
     ["/contact", "Contact"]
 ] as const;
+
 export function SiteHeader() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
