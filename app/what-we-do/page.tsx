@@ -3,7 +3,7 @@ import { heroImages } from "../content";
 export const metadata={title:"What we do"};
 export default function WhatWeDo(){
     return <>
-    <Hero eyebrow="What we do" title="Two distinct services, thoughtfully delivered" text="Kindnest is built around two specialist services: person-centred Supported Living for adults, and a child-led Children Contact Service for families navigating separation or professional involvement." images={heroImages.whatWeDo}/>
+    <Hero eyebrow="What we do" title="Two distinct services, thoughtfully delivered" text="Kindnest Care is built around two specialist services: person-centred Supported Living for adults, and a child-led Children Contact Service for families navigating separation or professional involvement." images={heroImages.whatWeDo}/>
     <section className="section">
         <div className="shell">
             <div className="section-head">

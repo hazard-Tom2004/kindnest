@@ -116,7 +116,7 @@ export function OfferingCards() {
     return <div className="offering-grid">{cards.map(card => <article className="offering-card" key={card.title}>
         <img src={card.image} alt="" />
         <div className="offering-overlay">
-            <p className="eyebrow">Kindnest service</p>
+            <p className="eyebrow">Kindnest Care Services</p>
             <h3>{card.title}</h3>
             <p>{card.copy}</p>
             <ul>

@@ -34,7 +34,7 @@ export default function ChildrenContact() {
                 <div className="section-head">
                     <p className="eyebrow">Specialist social work</p>
                     <h2>Support that extends around the whole family</h2>
-                    <p>Hover or focus a service to reveal the kind of practical, professional support available through Kindnest.</p>
+                    <p>Hover or focus a service to reveal the kind of practical, professional support available through Kindnest Care.</p>
                 </div>
                 <div className="contact-service-grid">{services.map(([title, image, perks]) => <article className="contact-service-card" key={title}>
                     <img src={image} alt="" />

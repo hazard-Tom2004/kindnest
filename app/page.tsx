@@ -10,7 +10,7 @@ export default function HomePage() {
                 <div className="section-head">
                     <p className="eyebrow">How we help</p>
                     <h2>Two specialist services, one caring approach</h2>
-                    <p>Explore Kindnest’s supported living and children contact services, each shaped around safety, dignity and meaningful progress.</p>
+                    <p>Explore Kindnest Care's supported living and children contact services, each shaped around safety, dignity and meaningful progress.</p>
                 </div><OfferingCards /></div>
         </section>
         <section className="section section-tint">
@@ -19,7 +19,7 @@ export default function HomePage() {
         </section>
         <section className="section">
             <div className="shell split">
-                <img className="feature-image" src={images.reading} alt="An adult reading with a child" />
+                <img className="feature-image" src={images.care} alt="An adult reading with a child" />
                 <div className="glass-copy">
                     <p className="eyebrow">Our commitment</p>
                     <h2>Where expertise meets human understanding</h2>

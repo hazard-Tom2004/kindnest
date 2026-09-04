@@ -143,7 +143,7 @@ function ServiceCard({ index, title, summary, details }: ServiceCardProps) {
 
 export default function SupportedLiving() {
     return <>
-        <Hero eyebrow="Supported living" title="Safe homes. Real independence. Genuine connection." text="Safe, high-quality and person-centred supported living services for adults aged 18 and over with learning disabilities and autism." images={heroImages.supportedLiving}>
+        <Hero eyebrow="Supported living" title="Safe homes. Real independence. Genuine connection." text="Safe, high-quality and person-centred supported living services for adults aged 18 to 65with learning disabilities and autism." images={heroImages.supportedLiving}>
             <Cta href="/contact?service=supported-living">Enquire now</Cta>
         </Hero>
 
@@ -153,7 +153,7 @@ export default function SupportedLiving() {
                     <p className="eyebrow">Person-centred support</p>
                     <h2>Support built around the person, not the service</h2>
                     <p>
-                        At Kindnest Care Limited, we provide high-quality supported living services for adults aged 18 and over with learning disabilities and autism. Our support is tailored to each individual's unique needs, preferences, strengths, and aspirations, empowering them to live independently while enjoying the safety and comfort of their own home.
+                        At Kindnest Care Limited, we provide high-quality supported living services for adults aged 18 to 65 with learning disabilities and autism. Our support is tailored to each individual's unique needs, preferences, strengths, and aspirations, empowering them to live independently while enjoying the safety and comfort of their own home.
                     </p>
                     <div className="pills">
                         <span>Individual choice</span>
@@ -191,7 +191,7 @@ export default function SupportedLiving() {
                 <article className="detail-card">
                     <h3>Who it is for</h3>
                     <ul>
-                        <li>Adults aged 18 and over</li>
+                        <li>Adults aged 18 to 65</li>
                         <li>People with learning disabilities</li>
                         <li>Autistic adults with sensory and communication needs</li>
                         <li>People transitioning from children's services or residential care</li>
