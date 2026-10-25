@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: "https://www.kindnestcare.co.uk/supported-living/application",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: "https://www.kindnestcare.co.uk/children-contact-service",
       lastModified: new Date(),
       changeFrequency: "monthly",

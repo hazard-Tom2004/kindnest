@@ -10,6 +10,7 @@ const links = [
     ["/supported-living", "Supported living"],
     ["/children-contact-service", "Children contact"],
     ["/gallery", "Gallery"],
+    ["/supported-living/application", "Work with us"],
     ["/contact", "Contact"]
 ] as const;
 
@@ -30,7 +31,7 @@ export function SiteHeader() {
                 <img className="brand-logo" src={images.logo} alt="Kindnest logo" />
 
             </Link>
-            <nav className="desktop-nav" aria-label="Primary">{links.slice(0, 6).map(([href, label]) =>
+            <nav className="desktop-nav" aria-label="Primary">{links.slice(0, 7).map(([href, label]) =>
                 <Link key={href} href={href}>{label}</Link>)}
                 <Link className="nav-cta" href="/contact">Make a referral <ArrowUpRight size={15} /></Link>
             </nav>

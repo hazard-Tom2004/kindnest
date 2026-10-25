@@ -14,6 +14,8 @@ const contacts = {
   "children-contact": { label: "Children Contact Service", email: "contact@kindnestcare.co.uk" },
 } as const;
 
+const recruitmentEmail = "info@kindnestcare.co.uk";
+
 type Service = keyof typeof contacts;
 
 // crude in-memory rate limit — resets on redeploy, fine for low-traffic sites
@@ -37,7 +39,18 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { name, email, phone, message, service } = body;
+    const { name, email, phone, message, service, formType, application } = body;
+
+    if (formType === "supported-living-application") {
+      if (!name || !email || !phone || !application) return NextResponse.json({ error: "Please complete all required details." }, { status: 400 });
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
+      if (body.website) return NextResponse.json({ ok: true });
+      const labels: Record<string, string> = { fullName: "Full name", phone: "Phone number", email: "Email address", postcode: "Postcode", role: "Role applying for", heardAbout: "How they heard about Kindnest Care", over18: "18 or over", rightToWork: "Right to work in the UK", dbs: "Enhanced DBS", travel: "Can travel around Waltham Forest", shifts: "Can work shifts", references: "Can provide references", currentJob: "Current / most recent job and reason for leaving", careExperience: "Years of care experience", workGaps: "Work-history gaps", experience: "Experience with", qualifications: "Qualifications and training", startDate: "Earliest start date / notice period", hours: "Hours wanted", availability: "Availability", transport: "Drives / own transport", whySupportedLiving: "Why supported living", dignity: "Dignity, privacy and independence", medication: "Medication refusal scenario", colleague: "Rude colleague scenario", safeguarding: "Confidential safeguarding disclosure", declaration: "Declaration" };
+      const applicationText = Object.entries(application as Record<string, unknown>).filter(([key]) => key !== "website").map(([key, value]) => `${labels[key] ?? key}: ${Array.isArray(value) ? value.join(", ") : String(value ?? "Not provided")}`).join("\n\n");
+      await resend.emails.send({ from: "Kindnest Website <enquiries@kindnestcare.co.uk>", to: recruitmentEmail, replyTo: email, subject: `Supported Living application screening — ${name}`, text: `SUPPORTED LIVING APPLICATION SCREENING FORM\n\n${applicationText}` });
+      return NextResponse.json({ ok: true });
+    }
 
     if (!name || !email || !message || !service) {
       return NextResponse.json({ error: "Missing required fields." }, { status: 400 });

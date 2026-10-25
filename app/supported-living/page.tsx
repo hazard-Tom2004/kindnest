@@ -143,8 +143,8 @@ function ServiceCard({ index, title, summary, details }: ServiceCardProps) {
 
 export default function SupportedLiving() {
     return <>
-        <Hero eyebrow="Supported living" title="Safe homes. Real independence. Genuine connection." text="Safe, high-quality and person-centred supported living services for adults aged 18 to 65with learning disabilities and autism." images={heroImages.supportedLiving}>
-            <Cta href="/contact?service=supported-living">Enquire now</Cta>
+        <Hero eyebrow="Supported living" title="Safe homes. Real independence. Genuine connection." text="Safe, high-quality and person-centred supported living services for adults aged 18 to 65 with learning disabilities and autism." images={heroImages.supportedLiving}>
+            <div className="hero-actions"><Cta href="/contact?service=supported-living">Enquire now</Cta><Cta href="/supported-living/application" ghost>Work with us</Cta></div>
         </Hero>
 
         <section className="section">
@@ -206,5 +206,6 @@ export default function SupportedLiving() {
                 </article>
             </div>
         </section>
+        <section className="section careers-banner-section"><div className="shell careers-banner"><div><p className="eyebrow">Join our team</p><h2>Make a meaningful difference every day.</h2><p>Interested in working in Supported Living? Complete our short screening form before sending your CV and application letter.</p></div><Cta href="/supported-living/application">Start your application</Cta></div></section>
     </>
 }
